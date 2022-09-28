@@ -5,9 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/95c0469538.js" crossorigin="anonymous"></script>
 <script defer src="main.js"></script></head>
 <body>
-  <h2>hehe</h2>
-  <script src="/dist/main.js"></script>
+  <main>
+    <section class="container">
+      <header>
+        <h2 class="todoHeader">Today's to-do</h2>
+        <i class="fa-solid fa-arrows-rotate arrow"></i>
+      </header>
+
+      <section>
+        <form>
+          <hr>
+          <input type="text" class="input" id="input" placeholder="add to your list">
+        </form>
+        <div class="todoContainer">
+        </div>
+        <div class="clear">
+          <button type="button" class="clear-completed">Clear all completed</button>
+        </div>
+      </section>
+    </section>
+  </main>
 </body>
 </html>
