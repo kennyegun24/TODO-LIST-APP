@@ -61,9 +61,7 @@ body {
   padding: 10px 0;
 }
 
-.fa-square {
-  font-size: 12px;
-  height: 20px;
+.checkBox {
   margin-left: -30px;
   margin-right: 10px;
 }
