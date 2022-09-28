@@ -5,7 +5,7 @@ const todoContainer = document.querySelector('.todoContainer');
 
 const lists = [{
   description: 'Start being me',
-  bool: 'true',
+  bool: 'false',
   index: '1',
 },
 {
@@ -25,7 +25,7 @@ lists.forEach((task) => {
     const hr = document.createElement('hr');
     ul.innerHTML = `
     <li>
-    <i class="fa-regular fa-square"></i>${task.description}<i class="fa-solid fa-ellipsis-vertical dots"></i>
+    <input class="checkBox" type="checkbox">${task.description}<i class="fa-solid fa-ellipsis-vertical dots"></i>
     </li>
     `;
     todoContainer.append(ul, hr);
