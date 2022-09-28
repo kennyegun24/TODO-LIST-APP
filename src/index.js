@@ -1,7 +1,6 @@
 import './style.css';
 
 const form = document.querySelector('form');
-// const input = document.querySelector('.input');
 const todoContainer = document.querySelector('.todoContainer');
 
 const lists = [{
