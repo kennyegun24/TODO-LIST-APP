@@ -6,8 +6,12 @@ module.exports = {
 
   entry: './src/index.js',
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
+  devServer: {
+    static: './dist',
   },
   plugins: [new HtmlWebpackPlugin({
     template: './src/index.html',
@@ -19,5 +23,8 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
 };
