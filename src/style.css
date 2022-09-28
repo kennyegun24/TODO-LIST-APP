@@ -2,5 +2,72 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: red;
+  height: 100vh;
+}
+
+.container {
+  border: 2px solid #e4cfcf;
+  box-shadow: 20px 20px 50px 25px grey;
+  padding: 20px 0;
+  height: auto;
+  width: 500px;
+  position: relative;
+}
+
+.input {
+  width: 88%;
+  padding: 10px 3%;
+  border: none;
+  outline: none;
+  margin: 0 3%;
+}
+
+.todoHeader {
+  margin-left: 20px;
+  text-align: left;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.arrow {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+
+.todoContainer ul {
+  list-style-type: none;
+}
+
+.todoContainer li {
+  text-align: left;
+  font-size: 18px;
+  font-family: sans-serif;
+  margin-left: 20px;
+}
+
+.clear-completed {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 12px 0;
+  font-style: italic;
+  color: #2e2d2d;
+}
+
+.clear {
+  text-align: center;
+  background: #eee8e8;
+  padding: 10px 0;
+}
+
+.checkBox {
+  margin-left: -30px;
+  margin-right: 10px;
+}
+
+.dots {
+  position: absolute;
+  right: 15px;
+  color: #2e2d2d;
 }
