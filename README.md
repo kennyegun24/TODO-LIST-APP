@@ -9,7 +9,7 @@ A basic website that allows users to add their day to day tasks.
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo](https://kennyegun24.github.io/TODO-LIST-APP/dist/)
 
 ## Getting Started
 
