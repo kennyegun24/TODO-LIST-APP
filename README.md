@@ -1,4 +1,4 @@
-# AwesomeBooks
+# To-Do List App
 
 A basic website that allows users to add their day to day tasks.
 
@@ -26,7 +26,7 @@ To get a local copy up and running follow these simple example steps.
 2. Clone this repo in your terminal or git bash using the command
 
    ```
-   git@github.com:KennyEgun/AwesomeBooks.git
+   
    ```
 
 3. run `npm install ` to install all the necessary dependencies including the linters
