@@ -62,7 +62,7 @@ body {
   padding: 10px 0;
 }
 
- .checkBox {
+.checkBox {
   margin-left: 30px;
   margin-right: 10px;
 }
@@ -78,7 +78,7 @@ body {
 }
 
 .newInput {
-  font-size: 20px;
+  font-size: 18px;
   border: none;
   outline: none;
 }
