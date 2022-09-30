@@ -9,9 +9,10 @@ body {
   border: 2px solid #e4cfcf;
   box-shadow: 20px 20px 50px 25px grey;
   padding: 20px 0 0 0;
-  height: auto;
+  height: 100vh;
   width: 500px;
   position: relative;
+  overflow: auto;
 }
 
 .input {
@@ -61,8 +62,8 @@ body {
   padding: 10px 0;
 }
 
-.checkBox {
-  margin-left: -30px;
+ .checkBox {
+  margin-left: 30px;
   margin-right: 10px;
 }
 
@@ -70,4 +71,18 @@ body {
   position: absolute;
   right: 15px;
   color: #2e2d2d;
+}
+
+.checkBox.strike {
+  text-decoration: underline;
+}
+
+.newInput {
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.add.done {
+  text-decoration: line-through;
 }
