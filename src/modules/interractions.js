@@ -1,4 +1,6 @@
-import { todos } from "../index";
+/* eslint-disable */
+import { todos } from '../index';
+/* eslint-enable */
 
 export const trueFalse = () => {
   const checkBox = Array.from(document.querySelectorAll('.checkBox'));
@@ -26,7 +28,7 @@ const clearCompleted = document.querySelector('#clear-completed');
 const del = () => {
   Array.from(document.querySelectorAll('.checkBox')).forEach((complete) => {
     if (complete.checked) {
-      console.log('cndncki')
+      console.log('cndncki');
       complete.parentElement.remove();
     }
   });
@@ -45,4 +47,4 @@ export const deleteItems = () => {
     localStorage.setItem('todos', JSON.stringify(todos));
     del();
   });
-}
+};
