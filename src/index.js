@@ -1,12 +1,16 @@
 import './style.css';
 import { clear } from './modules/clearUi';
+/* eslint-disable */
 import { deleteItems, trueFalse } from './modules/interractions';
+/* eslint-enable */
 
 const form = document.querySelector('form');
 const input = document.querySelector('.input');
 const todoContainer = document.querySelector('.todoContainer');
 let todo;
+/* eslint-disable */
 export let todos = JSON.parse(localStorage.getItem('todos')) || [];
+/* eslint-enable */
 const store = () => {
   todo = {
     Description: input.value,
@@ -68,8 +72,8 @@ const addTask = (todo) => {
     icon.classList.add('fa-ellipsis-vertical');
     icon.classList.add('drag');
   });
-  trueFalse()
-deleteItems()
+  trueFalse();
+  deleteItems();
 };
 Array.prototype.forEach.call(todos, addTask);
 
