@@ -73,9 +73,9 @@ const addTask = (todo) => {
     icon.classList.add('drag');
   });
   trueFalse();
-  deleteItems();
 };
 Array.prototype.forEach.call(todos, addTask);
+deleteItems();
 
 const editTodoList = () => {
   const editInput = document.querySelectorAll('.newInput');

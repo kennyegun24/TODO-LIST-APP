@@ -28,7 +28,6 @@ const clearCompleted = document.querySelector('#clear-completed');
 const del = () => {
   Array.from(document.querySelectorAll('.checkBox')).forEach((complete) => {
     if (complete.checked) {
-      console.log('cndncki');
       complete.parentElement.remove();
     }
   });
