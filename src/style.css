@@ -9,10 +9,16 @@ body {
   border: 2px solid #e4cfcf;
   box-shadow: 20px 20px 50px 25px grey;
   padding: 20px 0 0 0;
-  height: 100vh;
+  max-height: 500px;
+  margin-top: auto;
   width: 500px;
   position: relative;
   overflow: auto;
+  -ms-overflow-style: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .input {
@@ -73,6 +79,14 @@ body {
   color: #2e2d2d;
 }
 
+.bin {
+  cursor: pointer;
+}
+
+.drag {
+  cursor: crosshair;
+}
+
 .checkBox.strike {
   text-decoration: underline;
 }
@@ -81,8 +95,13 @@ body {
   font-size: 18px;
   border: none;
   outline: none;
+  width: 87%;
 }
 
 .add.done {
+  text-decoration: line-through;
+}
+
+.new {
   text-decoration: line-through;
 }
