@@ -1,11 +1,12 @@
 import './style.css';
-import { clear } from '../modules/clearUi';
+import { clear } from './modules/clearUi';
+import { deleteItems, trueFalse } from './modules/interractions';
 
 const form = document.querySelector('form');
 const input = document.querySelector('.input');
 const todoContainer = document.querySelector('.todoContainer');
 let todo;
-let todos = JSON.parse(localStorage.getItem('todos')) || [];
+export let todos = JSON.parse(localStorage.getItem('todos')) || [];
 const store = () => {
   todo = {
     Description: input.value,
@@ -30,13 +31,17 @@ const addTask = (todo) => {
   const checkBox = document.createElement('input');
   checkBox.type = 'checkbox';
   checkBox.value = todo.completed;
+  checkBox.checked = todo.completed;
   checkBox.classList.add('checkBox');
 
   const newInp = document.createElement('input');
   newInp.type = 'text';
   newInp.classList.add('newInput');
   newInp.value = todo.Description;
-
+  if (checkBox.checked) {
+    newInp.style.textDecoration = 'line-through';
+    newInp.style.opacity = '0.5';
+  }
   const icon = document.createElement('i');
   icon.classList.add('fa-solid');
   icon.classList.add('fa-ellipsis-vertical');
@@ -63,52 +68,10 @@ const addTask = (todo) => {
     icon.classList.add('fa-ellipsis-vertical');
     icon.classList.add('drag');
   });
+  trueFalse()
+deleteItems()
 };
 Array.prototype.forEach.call(todos, addTask);
-
-const trueFalse = () => {
-  const checkBox = Array.from(document.querySelectorAll('.checkBox'));
-  checkBox.forEach((complete) => {
-    const ind = checkBox.indexOf(complete);
-    complete.addEventListener('change', () => {
-      if (complete.value === 'true') {
-        complete.nextElementSibling.style.textDecoration = 'none';
-        complete.nextElementSibling.style.opacity = '1';
-        complete.nextElementSibling.classList.remove('hey');
-        complete.value = false;
-        todos[ind].completed = false;
-      } else {
-        complete.nextElementSibling.style.textDecoration = 'line-through';
-        complete.nextElementSibling.style.opacity = '0.5';
-        complete.nextElementSibling.classList.add('hey');
-        complete.value = true;
-        todos[ind].completed = true;
-      }
-      localStorage.setItem('todos', JSON.stringify(todos));
-    });
-  });
-};
-trueFalse();
-
-const clearCompleted = document.querySelector('#clear-completed');
-const checkBox = Array.from(document.querySelectorAll('.checkBox'));
-
-const del = () => {
-  checkBox.forEach((complete) => {
-    if (complete.value === 'true') {
-      complete.parentElement.style.display = 'none';
-    }
-  });
-};
-clearCompleted.addEventListener('click', () => {
-  const filterAll = todos.filter((item) => item.completed !== true);
-  todos = filterAll;
-  todos.forEach((todo, id) => {
-    todo.id = id;
-  });
-  localStorage.setItem('todos', JSON.stringify(todos));
-  del();
-});
 
 const editTodoList = () => {
   const editInput = document.querySelectorAll('.newInput');
