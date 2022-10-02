@@ -23,7 +23,6 @@ export const trueFalse = () => {
   });
 };
 
-
 const del = () => {
   Array.from(document.querySelectorAll('.checkBox')).forEach((complete) => {
     if (complete.checked) {
@@ -34,15 +33,14 @@ const del = () => {
 };
 
 export const deleteItems = () => {
-    const filterAll = todos.filter((item) => item.completed !== true);
-    todos.length = 0;
-    filterAll.forEach((item) => {
-      todos.push(item);
-    });
-    todos.forEach((todo, id) => {
-      todo.id = id;
-    });
-    localStorage.setItem('todos', JSON.stringify(todos));
-    del();
-  };
-;
+  const filterAll = todos.filter((item) => item.completed !== true);
+  todos.length = 0;
+  filterAll.forEach((item) => {
+    todos.push(item);
+  });
+  todos.forEach((todo, id) => {
+    todo.id = id;
+  });
+  localStorage.setItem('todos', JSON.stringify(todos));
+  del();
+};

@@ -78,9 +78,8 @@ Array.prototype.forEach.call(todos, addTask);
 const clearCompleted = document.querySelector('#clear-completed');
 
 clearCompleted.addEventListener('click', () => {
-
-deleteItems();
-})
+  deleteItems();
+});
 const editTodoList = () => {
   const editInput = document.querySelectorAll('.newInput');
   editInput.forEach((edits, indexed) => {
