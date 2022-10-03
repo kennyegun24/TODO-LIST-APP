@@ -1,7 +1,7 @@
 import './style.css';
 import { clear } from './modules/clearUi';
 /* eslint-disable */
-import { deleteItems, trueFalse } from './modules/interractions';
+import { del, trueFalse } from './modules/interractions';
 /* eslint-enable */
 
 const form = document.querySelector('form');
