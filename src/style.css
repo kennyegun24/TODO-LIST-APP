@@ -105,3 +105,64 @@ body {
 .new {
   text-decoration: line-through;
 }
+
+@media (max-width: 765px) {
+  body {
+    display: initial;
+    align-items: initial;
+    justify-content: initial;
+    height: 100vh;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .container {
+    margin: 30% auto 30% auto;
+    width: 80%;
+  }
+
+  .input {
+    width: 88%;
+    padding: 10px 3%;
+    border: none;
+    outline: none;
+    margin: 0 3%;
+  }
+
+  .checkBox {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .newInput {
+    font-size: 15px;
+    width: 82%;
+    padding: 2%;
+  }
+
+  .dots {
+    margin-top: 3%;
+    position: absolute;
+    right: 2%;
+    color: #2e2d2d;
+  }
+
+  .todoHeader {
+    margin-left: 20px;
+    text-align: left;
+    font-size: 15px;
+    font-family: sans-serif;
+  }
+
+  .arrow {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    font-size: 12px;
+  }
+}
