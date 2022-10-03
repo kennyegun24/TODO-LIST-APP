@@ -1,7 +1,7 @@
 import './style.css';
 import { clear } from './modules/clearUi';
 /* eslint-disable */
-import { deleteItems, trueFalse } from './modules/interractions';
+import { del, trueFalse } from './modules/interractions';
 /* eslint-enable */
 
 const form = document.querySelector('form');
@@ -75,7 +75,18 @@ const addTask = (todo) => {
   trueFalse();
 };
 Array.prototype.forEach.call(todos, addTask);
-deleteItems();
+
+const clearCompleted = document.querySelector('#clear-completed');
+
+clearCompleted.addEventListener('click', () => {
+  const filterAll = todos.filter((item) => item.completed !== true);
+  todos = filterAll
+  todos.forEach((todo, id) => {
+    todo.id = id;
+  });
+  localStorage.setItem('todos', JSON.stringify(todos));
+  del();
+});
 
 const editTodoList = () => {
   const editInput = document.querySelectorAll('.newInput');
