@@ -79,7 +79,7 @@ const clearCompleted = document.querySelector('#clear-completed');
 
 clearCompleted.addEventListener('click', () => {
   const filterAll = todos.filter((item) => item.completed !== true);
-  todos = filterAll
+  todos = filterAll;
   todos.forEach((todo, id) => {
     todo.id = id;
   });
