@@ -1,7 +1,7 @@
 # To-Do List App
 
 A basic website that allows users to add their day to day tasks.
-This website allows users to store each inputs to their local storage and these inputs can be deleted from the local storage also by clicking on the trash icon. Tis project was created to test my knowledge on webpack in general
+This website allows users to store each inputs to their local storage and these inputs can be deleted from the local storage also by clicking on the trash icon. Tis project was also created to test my knowledge on webpack in general
 
 ## Built With
 
