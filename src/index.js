@@ -112,3 +112,4 @@ form.addEventListener('submit', (e) => {
     alert('Please enter a task');
   }
 });
+
