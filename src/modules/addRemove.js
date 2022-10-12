@@ -1,3 +1,6 @@
+let todos = [];
+
+
 const removeBook = (id) => {
   todos = todos.filter((books) => books.id !== id);
   todos.forEach((todo, id) => {
@@ -7,6 +10,8 @@ const removeBook = (id) => {
 };
 
 const addTask = (todo) => {
+const todoContainer = document.querySelector('.todoContainer');
+
   const ul = document.createElement('div');
 
   const checkBox = document.createElement('input');
@@ -49,8 +54,7 @@ const addTask = (todo) => {
     icon.classList.add('fa-ellipsis-vertical');
     icon.classList.add('drag');
   });
-  trueFalse();
 };
 
-module.exports = addTask
-module.exports = removeBook
+module.exports = addTask;
+module.exports = removeBook;
