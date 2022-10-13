@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "repository": {
     "type": "git",
@@ -19,13 +23,18 @@
   },
   "homepage": "https://github.com/kennyegun24/TODO-LIST-APP#readme",
   "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^29.1.2",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
     "hint": "^2.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.1.2",
+    "jest-environment-jsdom": "^29.1.2",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
