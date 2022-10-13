@@ -1,8 +1,9 @@
 // export const sum = (a, b) => {
 //   return a + b;
 // }
-import { trueFalse } from "./interractions";
-import { todos } from "..";
+import { trueFalse } from './interractions.js';
+import { todos } from '..';
+
 const todoContainer = document.querySelector('.todoContainer');
 
 export const removeBook = (id) => {
