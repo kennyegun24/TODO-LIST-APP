@@ -1,7 +1,7 @@
 import './style.css';
-import { clear } from './modules/clearUi';
+import { clear } from './modules/clearUi.js';
 /* eslint-disable */
-import { del, trueFalse } from './modules/interractions';
+import { del, trueFalse } from './modules/interractions.js';
 /* eslint-enable */
 
 const form = document.querySelector('form');
@@ -109,6 +109,6 @@ form.addEventListener('submit', (e) => {
     addTask(todo);
     clear();
   } else {
-    alert('Please enter a task');
+    alert('Please enter a task');// eslint-disable-line
   }
 });

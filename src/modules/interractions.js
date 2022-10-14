@@ -26,7 +26,7 @@ export const trueFalse = () => {
 export const del = () => {
   Array.from(document.querySelectorAll('.checkBox')).forEach((complete) => {
     if (complete.checked) {
-      console.log('cndncki');
+      console.log('cndncki');// eslint-disable-line
       complete.parentElement.remove();
     }
   });

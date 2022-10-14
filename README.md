@@ -41,6 +41,10 @@ These were linter tests mainly
 - Html, run `npx stylelint "**/*.{css,scss}"`
 - Javascript `npx eslint .`
 
+
+### Run automated functionality test
+- To check for functionality with automated test run `npm test`
+
 ### Deployment
 
 ## Authors
