@@ -10,28 +10,28 @@ describe('Todo List operations', () => {
   document.body.insertAdjacentHTML('beforeend', clearAllChecked);
   // Edit todo task value (edit)
   test('Todo list should change from "kenny" to "random"', () => {
-    const todoEditValue = document.querySelector('.text');
+    const todoEditVal = document.querySelector('.text');
 
-    expect(todoEditValue.value).toMatch('kenny');
+    expect(todoEditVal.value).toMatch('kenny');
 
-    const newDescription = 'random';
-    todoEditValue.value = newDescription;
-    task.editTodo(todoEditValue.id, newDescription);
+    const Description_1 = 'random';
+    todoEditVal.value = Description_1;
+    task.editTodo(todoEditVal.id, Description_1);
 
-    expect(todoEditValue.value).toMatch('random');
-    expect(localStorageMock.data[0].description).toMatch(newDescription);
+    expect(todoEditVal.value).toMatch('random');
+    expect(localStorageMock.data[0].description).toMatch(Description_1);
   });
 
   // complete status
   test('Todo list should be marked as completed TRUE', () => {
-    const todoCheckBox = document.querySelector('.checked');
+    const todoCheck_box = document.querySelector('.checked');
 
-    expect(todoCheckBox.checked).toBeFalsy();
-    todoCheckBox.checked = true;
-    task.isCompletedStatus(todoCheckBox.id, todoCheckBox.checked);
+    expect(todoCheck_box.checked).toBeFalsy();
+    todoCheck_box.checked = true;
+    task.isCompletedStatus(todoCheck_box.id, todoCheck_box.checked);
 
     expect(localStorageMock.data[0].completed).toBeTruthy();
-    expect(todoCheckBox.checked).toBeTruthy();
+    expect(todoCheck_box.checked).toBeTruthy();
   });
 
   // clear all checked taks
