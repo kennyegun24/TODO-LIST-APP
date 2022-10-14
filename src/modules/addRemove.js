@@ -1,6 +1,4 @@
-// export const sum = (a, b) => {
-//   return a + b;
-// }
+
 import { trueFalse } from './interractions.js';
 import { todos } from '..';
 
