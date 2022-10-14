@@ -1,4 +1,4 @@
-import { localStorageMock, task } from "./addRemove.test.js";
+import { localStorageMock, task } from './addRemove.test.js';
 
 const clearAllChecked = `
 <div class="clear-all">
@@ -14,24 +14,24 @@ describe('Todo List operations', () => {
 
     expect(todoEditVal.value).toMatch('kenny');
 
-    const Description_1 = 'random';
-    todoEditVal.value = Description_1;
-    task.editTodo(todoEditVal.id, Description_1);
+    const description1 = 'random';
+    todoEditVal.value = description1;
+    task.editTodo(todoEditVal.id, description1);
 
     expect(todoEditVal.value).toMatch('random');
-    expect(localStorageMock.data[0].description).toMatch(Description_1);
+    expect(localStorageMock.data[0].description).toMatch(description1);
   });
 
   // complete status
   test('Todo list should be marked as completed TRUE', () => {
-    const todoCheck_box = document.querySelector('.checked');
+    const todoCheckbox = document.querySelector('.checked');
 
-    expect(todoCheck_box.checked).toBeFalsy();
-    todoCheck_box.checked = true;
-    task.isCompletedStatus(todoCheck_box.id, todoCheck_box.checked);
+    expect(todoCheckbox.checked).toBeFalsy();
+    todoCheckbox.checked = true;
+    task.isCompletedStatus(todoCheckbox.id, todoCheckbox.checked);
 
     expect(localStorageMock.data[0].completed).toBeTruthy();
-    expect(todoCheck_box.checked).toBeTruthy();
+    expect(todoCheckbox.checked).toBeTruthy();
   });
 
   // clear all checked taks

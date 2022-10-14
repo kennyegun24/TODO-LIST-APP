@@ -61,4 +61,4 @@ describe('Ading and Removing a function', () => {
   });
 });
 
-export {localStorageMock, task}
+export { localStorageMock, task };
