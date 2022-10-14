@@ -22,17 +22,29 @@ describe('Ading and Removing a function', () => {
     // Object 1
     document.body.insertAdjacentHTML('afterbegin', mockBody);
     const todoBody = document.querySelector('.todo-body');
-    const object1 = {
-      description: 'Kenny',
+    let object1 = {
+      description: 'kenny',
       completed: false,
       index: 1,
       id: 1,
     };
     task.addTodo(object1);
     todoBody.insertAdjacentHTML('afterbegin', html(object1));
-    const counter = todoBody.children.length;
+    let counter = todoBody.children.length;
     expect(localStorageMock.data[0]).toEqual(object1);
     expect(counter).toBe(1);
+
+    object1 = {
+      description: 'random',
+      completed: true,
+      index: 2,
+      id: 2,
+    };
+    task.addTodo(object1);
+    todoBody.insertAdjacentHTML('afterbegin', html(object1));
+    counter = todoBody.children.length;
+    expect(localStorageMock.data[1]).toEqual(object1);
+    expect(counter).toBe(2);
   });
 
   test('Delete todo Item', () => {
@@ -44,5 +56,9 @@ describe('Ading and Removing a function', () => {
         task.removeTodo(e.target.parentNode.id);
       });
     });
+    document.querySelector('button[id="2"]').click();
+    task.removeTodo(2);
   });
 });
+
+export { localStorageMock, task };
